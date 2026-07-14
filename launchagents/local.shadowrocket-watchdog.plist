@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>local.shadowrocket-watchdog</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/USERNAME/Library/Application Support/shadowrocket-watchdog/shadowrocket-watchdog.zsh</string>
+  </array>
+
+  <key>StartInterval</key>
+  <integer>60</integer>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>FAIL_THRESHOLD</key>
+    <string>3</string>
+    <key>COOLDOWN_SECONDS</key>
+    <string>900</string>
+    <key>DISCONNECT_BEFORE_TRIGGER</key>
+    <string>1</string>
+    <key>DISCONNECT_SETTLE_SECONDS</key>
+    <string>5</string>
+    <key>UPDATE_WAIT_SECONDS</key>
+    <string>30</string>
+    <key>REOPEN_ON_TRIGGER</key>
+    <string>0</string>
+    <key>RECONNECT_AFTER_TRIGGER</key>
+    <string>1</string>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/Users/USERNAME/Library/Application Support/shadowrocket-watchdog/launchd.out.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/USERNAME/Library/Application Support/shadowrocket-watchdog/launchd.err.log</string>
+</dict>
+</plist>
