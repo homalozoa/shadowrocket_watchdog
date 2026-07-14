@@ -9,7 +9,7 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/zsh</string>
-    <string>/Users/USERNAME/Library/Application Support/shadowrocket-watchdog/shadowrocket-watchdog.zsh</string>
+    <string>/Users/USERNAME/Library/Application Support/shadowrocket-watchdog/shadowrocket-watchdog.sh</string>
   </array>
 
   <key>StartInterval</key>
