@@ -9,8 +9,15 @@ Shadowrocket to update its subscriptions, then asks Shadowrocket to reconnect.
 Run:
 
 ```sh
-./scripts/install.zsh
+./scripts/install.sh
+bash scripts/install.sh
+zsh scripts/install.sh
 ```
+
+The installer reads `$SHELL` and uses it when it points to an executable Bash
+or Zsh. Otherwise it falls back to `/bin/zsh`, then `/bin/bash`. The selected
+absolute path is stored in the installed LaunchAgent, so every scheduled run
+uses the same interpreter regardless of which shell invoked the installer.
 
 The installer copies the runtime script into
 `~/Library/Application Support/shadowrocket-watchdog/` because macOS
@@ -31,7 +38,7 @@ tail -f "$HOME/Library/Application Support/shadowrocket-watchdog/watchdog.log"
 ## Tune
 
 Edit `launchagents/local.shadowrocket-watchdog.plist`, then rerun
-`./scripts/install.zsh`.
+`./scripts/install.sh` with Bash, Zsh, or direct execution.
 
 - `FAIL_THRESHOLD`: consecutive failures before triggering.
 - `COOLDOWN_SECONDS`: minimum seconds between triggers.
@@ -46,5 +53,7 @@ Edit `launchagents/local.shadowrocket-watchdog.plist`, then rerun
 ## Uninstall
 
 ```sh
-./scripts/uninstall.zsh
+./scripts/uninstall.sh
+bash scripts/uninstall.sh
+zsh scripts/uninstall.sh
 ```
